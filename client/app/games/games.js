@@ -2,8 +2,7 @@
 
 angular.module('meanTutorialApp')
   .config(function ($stateProvider) {
-    $stateProvider
-      .state('games', {
+    $stateProvider.state('games', {
         url: '/games',
         template: '<games></games>'
       });

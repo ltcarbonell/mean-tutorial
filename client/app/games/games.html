@@ -1,3 +1,27 @@
 <div class="col-md-12">
-This is the games view.
+  <h1>Games</h1>
+  <table class="table table-striped">
+    <thead>
+      <th>Name</th>
+      <th>Platform</th>
+      <th>Genre</th>
+      <th>Action</th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="game in $ctrl.games">
+        <td>{{game.name}}</td>
+        <td>{{game.platform}}</td>
+        <td>{{game.genre}}</td>
+        <td>Delete</td>
+      </tr>
+    </tbody>
+    <tr>
+      <td><input type="text" ng-model="$ctrl.newGame.name"></td>
+      <td><input type="text" ng-model="$ctrl.newGame.platform"></td>
+      <td><input type="text" ng-model="$ctrl.newGame.genre"></td>
+      <td>
+        <button class="btn btn-primary" ng-click="$ctrl.addNewGame()">Add New</button>
+      </td>
+    </tr>
+  </table>
 </div>
